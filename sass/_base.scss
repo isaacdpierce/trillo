@@ -25,7 +25,20 @@ COLORS
 
 // BOX SHADOWS
   --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light:  0 2rem 5rem rgba(0,0,0,.06);
+
+// BORDERS
+  --line: 1px solid var(--color-grey-light-3);
 }
+
+// SASS VARABLES -- FOR MEDIA QUERIES ONLY
+$bp-largest: 75rem; // 1200px / 16 = 75rem
+$bp-large: 68.75rem; // 1100px / 16 = 68.75rem
+$bp-medium: 56.25rem; // 900px / 16 = 56.25rem
+$bp-small: 37.5rem; // 600px / 16 = 37.5rem
+$bp-smallest: 31.25rem; // 500px / 16 = 31.25rem
+
+
 
 // GLOBAL RESET
 * {
@@ -42,6 +55,10 @@ COLORS
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px (10px / 16px(browser default) = 62.5%)
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%; // wanting 8px -> 8 / 16 = 50%
+  }
 }
 // RESET OVER
 
